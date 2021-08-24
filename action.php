@@ -55,7 +55,7 @@ if ($request_data->action == "update") {
 if ($request_data->action == "dalete") {
 
     $stmt = $conn->prepare("DELETE FROM `users` WHERE `id` = :id");
-    $stmt->execute([":id"=> $request_data->id]);
+    $stmt->execute([":id" => $request_data->id]);
 
     $output = array("message" => "Delete Complete");
     echo json_encode($output);
